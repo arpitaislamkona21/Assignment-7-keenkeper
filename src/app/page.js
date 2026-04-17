@@ -3,6 +3,7 @@ import React from 'react';
 import friends from "./data/friends.json";
 import Navbar from "./components/Navbar";
 import FriendCard from "./components/FriendCard";
+import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 // যদি StatsCards ফাইল থাকে তবে ইমপোর্ট রাখুন, নাহলে নিচের কমেন্ট করা অংশটি ব্যবহার করুন
 // import StatsCards from "./components/StatsCards"; 
@@ -19,7 +20,7 @@ export default function Home() {
             Friends to keep close in your life
           </h1>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-sm">
-            Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
+            Your personal shelf of meaningful connections. Browse, tend, and nurture the <br/>relationships that matter most.
           </p>
           <button className="bg-[#064e3b] text-white px-6 py-2 rounded-md font-medium flex items-center mx-auto">
             <span className="mr-2">+</span> Add a Friend
@@ -55,15 +56,27 @@ export default function Home() {
       {/* Footer Section - সাধারণ HTML ট্যাগ হিসেবে ব্যবহার করুন */}
       <footer className="bg-[#064e3b] text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-2">KeenKeeper</h2>
-          <p className="text-xs opacity-70 mb-6 max-w-md mx-auto">
-            Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
-          </p>
+          <h2 className="text-6xl font-bold mb-2"><span className='font-extrabold'>Keen</span>Keeper</h2>
+          <p className='text-white'>Your personal shelf of meaningful connections.Browse, tend,and nurture the relationships that matter most.</p>
           
-          <div className="flex justify-center gap-4 mb-8">
-             <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-xs">FB</div>
-             <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-xs">IG</div>
-             <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-xs">TW</div>
+          <div className='py-2.5'>
+           <div> <p >Social Links</p></div>
+            <div className="flex justify-center gap-4 py-2.5 mb-8">
+  {/* Facebook */}
+  <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
+    <FaFacebookF className="text-white text-xs" />
+  </a>
+
+  {/* Instagram */}
+  <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
+    <FaInstagram className="text-white text-xs" />
+  </a>
+
+  {/* Twitter (বা X) */}
+  <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
+    <FaTwitter className="text-white text-xs" />
+  </a>
+</div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-[10px] opacity-60 border-t border-white/10 pt-6">
