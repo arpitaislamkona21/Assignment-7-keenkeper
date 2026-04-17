@@ -1,19 +1,11 @@
 "use client";
 import React from 'react';
 import friends from "./data/friends.json";
-import Navbar from "./components/Navbar";
 import FriendCard from "./components/FriendCard";
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
-
-// যদি StatsCards ফাইল থাকে তবে ইমপোর্ট রাখুন, নাহলে নিচের কমেন্ট করা অংশটি ব্যবহার করুন
-// import StatsCards from "./components/StatsCards"; 
-
 export default function Home() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar />
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
@@ -54,39 +46,7 @@ export default function Home() {
       </main>
 
       {/* Footer Section - সাধারণ HTML ট্যাগ হিসেবে ব্যবহার করুন */}
-      <footer className="bg-[#064e3b] text-white py-12 mt-20">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-6xl font-bold mb-2"><span className='font-extrabold'>Keen</span>Keeper</h2>
-          <p className='text-white'>Your personal shelf of meaningful connections.Browse, tend,and nurture the relationships that matter most.</p>
-          
-          <div className='py-2.5'>
-           <div> <p >Social Links</p></div>
-            <div className="flex justify-center gap-4 py-2.5 mb-8">
-  {/* Facebook */}
-  <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
-    <FaFacebookF className="text-white text-xs" />
-  </a>
-
-  {/* Instagram */}
-  <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
-    <FaInstagram className="text-white text-xs" />
-  </a>
-
-  {/* Twitter (বা X) */}
-  <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
-    <FaTwitter className="text-white text-xs" />
-  </a>
-</div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6 text-[10px] opacity-60 border-t border-white/10 pt-6">
-            <span>© 2024 KeenKeeper. All rights reserved.</span>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookies</a>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 }

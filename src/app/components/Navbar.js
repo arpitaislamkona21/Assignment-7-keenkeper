@@ -16,7 +16,7 @@ export default function Navbar() {
 };
 
   return (
-    <div className="flex justify-between p-4 shadow">
+    <div className="flex justify-between bg-white p-4 shadow">
       <h1 className="font-extrabold text-black text-xl">Keen<span className="text-green-900 font-bold">Keeper</span></h1>
 
       <div className="flex gap-6 ">
